@@ -55,9 +55,9 @@ module.exports.getAirportsByProximity = function(location, callback, limit) {
 			$near: {
 				$geometry: {
 					type: 'Point',
-					coordinates: [-73.965355,40.782865]
+					coordinates: [location.lon, location.lat]
 				},
-				$maxDistance: 20000
+				$maxDistance: location.distance * 1000
 			}
 		}
 	},

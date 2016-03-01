@@ -14,4 +14,18 @@ myApp.controller('AppController', ['$scope', '$http', function($scope, $http){
 			$scope.airports = response;
 		});
 	}
+
+	$scope.findAirportsByProx = function() {
+		var location = {
+			distance: $scope.location.distance
+		}
+		$http.get('/geocode/location?address=' + $scope.location.address).success(function(loc_response) {
+			location.lat = loc_response.locations[0].latitude;
+			location.lon = loc_response.locations[0].longitude;
+			
+			$http.post('/api/airports/prox', location).success(function(response) {
+				$scope.airports = response;
+			});
+		});
+	}
 }]);
