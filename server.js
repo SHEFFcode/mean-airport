@@ -1,4 +1,4 @@
-var PORT = process.env.port || 7000;
+var PORT = process.env.PORT || 7000;
 var express = require('express');
 var express_geocoding_api = require('express-geocoding-api');
 var bodyParcer = require('body-parser');
