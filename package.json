@@ -1,0 +1,18 @@
+{
+  "name": "mean-airport",
+  "version": "1.0.0",
+  "description": "find airports near you",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies" : {
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*",
+    "express-geocoding-api": "*"
+    },
+  "author": "Jeremy Shefer",
+  "license": "ISC"
+}
