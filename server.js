@@ -62,5 +62,7 @@ app.post('/api/airports/prox', function(req, res) {
 	});
 });
 
+//Listen for the ports
+
 app.listen(PORT);
 console.log('App is running on port...' + PORT);
